@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #333333;
+    --third-color: #E57521;
+}
+
+
+
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+
+.navbar {
+    padding: 1em;
+    background: linear-gradient(to right, white 55% ,var(--third-color) 45%)
+}
+
+.navbar .logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    padding: 1px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .logo span {
+    color: var(--third-color);
+}
+
+
+
+.navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+    border-color: white;
+  
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-evenly;
+    position: auto;
+    height: auto;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    justify-content:space-evenly;
+    
+}
+
+
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    padding: .2em 8em;
+
+}
+
+.navbar nav li {
+    font-weight: bold;
+
+}
+
+.navbar nav .Learn {
+    font-weight: bold;
+    border-radius: 5em;
+    margin-top: -.2em;
+}
