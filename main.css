@@ -11,73 +11,39 @@ body {
     background-color: #FFFFFF;
     margin: 0;
     font-family: 'Poppins';
+    display: inline;
 }
 
-
-.navbar {
-    padding: 1em;
-    background: linear-gradient(to right, white 55% ,var(--third-color) 45%)
-}
-
-.navbar .logo {
+/* .navbar-with-hero .logo {
     text-decoration: none;
     font-weight: bold;
     color: var(--secondary-color);
     font-size: 1.2em;
-    padding: 1px;
-    display: flex;
-    justify-content: flex-end;
 }
 
-.navbar .logo span {
+.navbar-with-hero .logo span {
     color: var(--third-color);
-}
+} */
 
-
-
-.navbar .container {
+.wraper {
+    height: 100%;
     display: grid;
-    grid-template-columns: 180px auto;
-    justify-content: unset;
-    border-color: white;
-  
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas: 
+    "h h h h h h h h2 h2 h2 h2 h2"
+    "h h h h h h h h2 h2 h2 h2 h2"
+    "f f f f f f f f f f f f";
 }
 
-.navbar nav {
-    display: flex;
-    justify-content: space-evenly;
-    position: auto;
-    height: auto;
-    width: 100%;
-    padding: 0;
+.header {
+    grid-area: h;
 }
 
-.navbar nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 2px;
-    justify-content:space-evenly;
-    
+.header-secondary {
+    grid-area: h2;
 }
 
-
-
-.navbar nav a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 1.2em;
-    padding: .2em 8em;
-
-}
-
-.navbar nav li {
-    font-weight: bold;
-
-}
-
-.navbar nav .Learn {
-    font-weight: bold;
-    border-radius: 5em;
-    margin-top: -.2em;
+.footer {
+    grid-area: f;
 }
