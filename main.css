@@ -14,22 +14,12 @@ body {
     display: inline;
 }
 
-/* .navbar-with-hero .logo {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--secondary-color);
-    font-size: 1.2em;
-}
-
-.navbar-with-hero .logo span {
-    color: var(--third-color);
-} */
 
 .wraper {
-    height: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
     "h h h h h h h h2 h2 h2 h2 h2"
     "h h h h h h h h2 h2 h2 h2 h2"
@@ -38,6 +28,7 @@ body {
 
 .header {
     grid-area: h;
+    padding: 0;
 }
 
 .header-secondary {
@@ -46,4 +37,87 @@ body {
 
 .footer {
     grid-area: f;
+}
+
+.header .container, .header-secondary .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1em;
+}
+
+.header .container > .hero {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .logo {
+    justify-content: start;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    padding: 12px;
+}
+
+.header .logo span {
+    color: var(--third-color);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+}
+
+.header nav ul {
+    display: flex;
+}
+
+
+li:not(:first-of-type) {
+    padding-left: 5.0em;
+}
+
+li:not(:last-of-type) {
+    padding-right: 5.0em;
+}
+
+.header-secondary .container {
+    padding: 1em 0 0 0;
+    background-color: var(--third-color);
+}
+
+
+.header-secondary nav ul {
+    display: flex;
+}
+
+.footer .container {
+    background-color: var(--secondary-color);
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.footer a {
+    color: var(--primary-color);
+    font-weight: lighter;
 }
