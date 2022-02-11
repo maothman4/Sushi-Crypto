@@ -5,30 +5,36 @@
     --third-color: #E57521;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #FFFFFF;
-    margin: 0;
+    margin: auto;
     font-family: 'Poppins';
-    display: inline;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
 }
 
 
 .wraper {
-    height: auto;
-    display: grid;
+    height: 100vh;
+    display: inline-grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto 58px;
     grid-template-areas: 
     "h h h h h h h h2 h2 h2 h2 h2"
     "h h h h h h h h2 h2 h2 h2 h2"
-    "f f f f f f f f f f f f";
+    "f f f f f f f f f f f f" ;
+    
 }
 
 .header {
     grid-area: h;
-    padding: 0;
+    
 }
 
 .header-secondary {
@@ -37,6 +43,7 @@ body {
 
 .footer {
     grid-area: f;
+    
 }
 
 .header .container, .header-secondary .container {
@@ -114,7 +121,7 @@ li:not(:last-of-type) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+   
 }
 
 .footer a {
